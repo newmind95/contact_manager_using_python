@@ -86,9 +86,10 @@ while True:
 print()
 if end is True: 
     if len(contact_dictionary) > 0:
+        sorted_contact_dictionary = dict(sorted(contact_dictionary.items(), key=lambda first_name: first_name[0]))
         print('Contact list:')
         print('Name:                  Phonenumber:')
-        for first_name, last_name_and_phone_number in contact_dictionary.items():
+        for first_name, last_name_and_phone_number in sorted_contact_dictionary.items():
             last_name = last_name_and_phone_number[0]
             phonenumber = last_name_and_phone_number[1]
             fullname = first_name + ' ' + last_name
