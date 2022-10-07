@@ -39,8 +39,8 @@ while True:
         person_last_name = input('Enter person last name: ')
         person_phone_number = input('Enter person phone number: ')
        
-        if person_first_name.isalpha() \
-                and person_last_name.isalpha() \
+        if person_first_name.isalnum() \
+                and person_last_name.isalnum() \
                 and person_phone_number.isdigit():
 
             if person_first_name not in contact_dictionary:
